@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 
 class Homepage extends StatelessWidget {
@@ -13,6 +14,17 @@ class Homepage extends StatelessWidget {
         centerTitle: true,
         shadowColor: Colors.black,
       ),
-    );
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButton: FloatingActionButton(
+        onPressed: (){},
+        backgroundColor: const Color.fromARGB(255, 42, 226, 48),
+        elevation: 0,
+        
+        child: const Icon(Icons.add, size: 45,),),
+
+        bottomNavigationBar: BottomAppBar(
+          color:Colors.yellow
+        ),
+      );
   }
 }

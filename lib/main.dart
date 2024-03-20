@@ -1,3 +1,4 @@
+
 import 'package:botany/pages/home_page.dart';
 import 'package:flutter/material.dart';
 
@@ -13,6 +14,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       home: Homepage(),
       debugShowCheckedModeBanner: false,
+      
 
     );
 
