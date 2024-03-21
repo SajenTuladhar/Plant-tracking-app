@@ -3,8 +3,15 @@ import 'package:botany/pages/dialouge_box.dart';
 import 'package:flutter/material.dart';
 
 
-class Homepage extends StatelessWidget {
+
+class Homepage extends StatefulWidget {
   const Homepage({super.key});
+
+  @override
+  State<Homepage> createState() => _HomepageState();
+}
+
+class _HomepageState extends State<Homepage> {
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +31,7 @@ class Homepage extends StatelessWidget {
         backgroundColor:const Color.fromARGB(255, 12, 172, 9),
         elevation: 0,
         shape:RoundedRectangleBorder(borderRadius: BorderRadius.circular(67)),
-        child: const Icon(Icons.energy_savings_leaf, size: 45,color: Colors.white,),),
+        child: const Icon(Icons.energy_savings_leaf_rounded, size: 45,color: Colors.white,),),
 
         bottomNavigationBar:const BottomAppBar(
           color:Color.fromARGB(255, 195, 89, 27),
@@ -35,7 +42,7 @@ class Homepage extends StatelessWidget {
             mainAxisSize: MainAxisSize.max,
             children: [
               Padding(
-                padding: EdgeInsets.only(left: 30),
+                padding: EdgeInsets.only(left: 22),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
@@ -47,13 +54,16 @@ class Homepage extends StatelessWidget {
                     ),
                     Text(
                       "Home",
-                      style: TextStyle(color: Colors.white),
+                      style: TextStyle(color: Colors.white,
+                      fontSize: 15,
+                      fontWeight:FontWeight.bold,
+                      letterSpacing: 2.5),
                     )
                   ],
                 ),
               ),
               Padding(
-                padding: EdgeInsets.only(right: 30),
+                padding: EdgeInsets.only(right: 18),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
@@ -65,7 +75,10 @@ class Homepage extends StatelessWidget {
                     ),
                     Text(
                       "Settings",
-                      style: TextStyle(color: Colors.white),
+                      style: TextStyle(color: Colors.white,
+                      fontSize: 15,
+                      fontWeight:FontWeight.bold,
+                      letterSpacing: 2.5),
                     )
                   ],
                 ),
