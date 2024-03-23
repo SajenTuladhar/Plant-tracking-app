@@ -5,11 +5,12 @@ class DialougeBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return   AlertDialog(
-      content: Container(
+    return const   AlertDialog(
+      
+      content: SizedBox(
         height: 20  ,
         width: 50,
-        child: const Column(
+        child:  Column(
          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
 
       ),
