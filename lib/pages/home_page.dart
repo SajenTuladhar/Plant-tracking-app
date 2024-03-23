@@ -1,8 +1,6 @@
-
 import 'package:botany/pages/dialouge_box.dart';
+import 'package:botany/setting_page.dart';
 import 'package:flutter/material.dart';
-
-
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
@@ -12,10 +10,11 @@ class Homepage extends StatefulWidget {
 }
 
 class _HomepageState extends State<Homepage> {
-
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      
       appBar: AppBar(
         backgroundColor: const Color.fromARGB(255, 255, 255, 255),
         title: const Text("Botany"),
@@ -25,68 +24,77 @@ class _HomepageState extends State<Homepage> {
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingActionButton.large(
-        onPressed: (){
+        onPressed: () {
           DialougeBox;
         },
-        backgroundColor:const Color.fromARGB(255, 12, 172, 9),
+        backgroundColor: const Color.fromARGB(255, 12, 172, 9),
         elevation: 0,
-        shape:RoundedRectangleBorder(borderRadius: BorderRadius.circular(67)),
-        child: const Icon(Icons.energy_savings_leaf_rounded, size: 45,color: Colors.white,),),
-
-        bottomNavigationBar:const BottomAppBar(
-          color:Color.fromARGB(255, 195, 89, 27),
-          notchMargin: 25,
-          shape: CircularNotchedRectangle(),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            mainAxisSize: MainAxisSize.max,
-            children: [
-              Padding(
-                padding: EdgeInsets.only(left: 22),
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Icon(
-                      size: 35,
-                      Icons.home,
-                      color:Colors.white,
-                      
-                    ),
-                    Text(
-                      "Home",
-                      style: TextStyle(color: Colors.white,
-                      fontSize: 15,
-                      fontWeight:FontWeight.bold,
-                      letterSpacing: 2.5),
-                    )
-                  ],
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.only(right: 18),
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Icon(
-                      size: 35,
-                      Icons.settings,
-                      color:Colors.white,
-                      
-                    ),
-                    Text(
-                      "Settings",
-                      style: TextStyle(color: Colors.white,
-                      fontSize: 15,
-                      fontWeight:FontWeight.bold,
-                      letterSpacing: 2.5),
-                    )
-                  ],
-                ),
-              )
-            ],
-          ),
-          
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(67)),
+        child: const Icon(
+          Icons.add,
+          size: 45,
+          color: Colors.white,
         ),
-      );
+      ),
+      bottomNavigationBar: BottomAppBar(
+        color: const Color.fromARGB(255, 184, 88, 16),
+        notchMargin: 20,
+        shape: const CircularNotchedRectangle(),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisSize: MainAxisSize.max,
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(left: 30),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  IconButton(
+                    icon: const Icon(Icons.home_filled),
+                    onPressed: () {},
+                    iconSize: 40,
+                    color: Colors.white,
+                    focusColor: Colors.white,
+                  ),
+                  // Text(
+                  //   "Home",
+                  //   style: TextStyle(color: Colors.white,
+                  //   fontSize: 15,
+                  //   fontWeight:FontWeight.bold,
+                  //   letterSpacing: 0),
+                  // )
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(right: 24),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  IconButton(
+                    icon: const Icon(Icons.settings_rounded),
+                    onPressed: () {
+                      Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const SettingsPage()),
+                      );
+                    },
+                    iconSize: 40,
+                    color: Colors.white,
+                  ),
+                  // Text(
+                  //   "Settings",
+                  //   style: TextStyle(color: Colors.white,
+                  //   fontSize: 15,
+                  //   fontWeight:FontWeight.bold,
+                  //   letterSpacing: 2.5),
+                  // )
+                ],
+              ),
+            )
+          ],
+        ),
+      ),
+    );
   }
 }
