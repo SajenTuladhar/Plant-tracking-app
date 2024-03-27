@@ -1,7 +1,6 @@
 import 'package:botany/pages/dialouge_box.dart';
 import 'package:botany/setting_page.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
@@ -52,25 +51,45 @@ class _HomepageState extends State<Homepage> {
           const SizedBox(
             height: 30,
           ),
-          Container(
-            decoration: const BoxDecoration(
-              
-                color: Color.fromARGB(129, 71, 172, 66),
-                borderRadius:
-                    BorderRadius.only(bottomLeft: Radius.circular(20),
-                    topRight: Radius.circular(20),
-                    topLeft: Radius.circular(20),
-                    bottomRight: Radius.circular(20))),
-            height: 220,
-            padding: const EdgeInsets.all(70),
-            child: const Text("Your Plants need water",style: TextStyle(fontSize: 30),),
-          ),
-          Container(
-            decoration: const BoxDecoration(
-              color:Color.fromARGB(255, 145, 128, 128)
+          //Message container
+          UnconstrainedBox(
+            child: Container(
+              height: 200,
+              width: 385,
+              decoration: const BoxDecoration(
+                  color: Color.fromARGB(129, 71, 172, 66),
+                  borderRadius: BorderRadius.only(
+                      bottomLeft: Radius.circular(20),
+                      topRight: Radius.circular(20),
+                      topLeft: Radius.circular(20),
+                      bottomRight: Radius.circular(20))),
+              padding: const EdgeInsets.all(60),
+              child: const Text(
+                "Your Plants need water",
+                style: TextStyle(fontSize: 30),
+                textAlign: TextAlign.start,
+              ),
             ),
-            height: 700,
-           child: GridView.count(crossAxisCount: 2),
+          ),
+          const SizedBox(
+            height: 30,
+          ),
+
+          //your plants container
+
+          UnconstrainedBox(
+            child: Container(
+              decoration: const BoxDecoration(
+                  borderRadius: BorderRadius.only(
+                      bottomLeft: Radius.circular(20),
+                      topRight: Radius.circular(20),
+                      topLeft: Radius.circular(20),
+                      bottomRight: Radius.circular(20)),
+                  color: Color.fromARGB(255, 145, 128, 128)),
+              height: 600,
+              width: 385,
+              child: GridView.count(crossAxisCount: 2),
+            ),
           )
         ],
       ),
