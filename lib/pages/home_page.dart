@@ -76,20 +76,49 @@ class _HomepageState extends State<Homepage> {
           ),
 
           //your plants container
+          
 
-          UnconstrainedBox(
-            child: Container(
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            
+            children :[ Container(
+              
               decoration: const BoxDecoration(
                   borderRadius: BorderRadius.only(
                       bottomLeft: Radius.circular(20),
                       topRight: Radius.circular(20),
                       topLeft: Radius.circular(20),
                       bottomRight: Radius.circular(20)),
-                  color: Color.fromARGB(255, 145, 128, 128)),
+                  color: Color.fromARGB(255, 202, 201, 201)),
               height: 600,
               width: 385,
-              child: GridView.count(crossAxisCount: 2),
+              padding: const EdgeInsets.all(30),
+              
+              
+              child: Column(children: [
+              const Text("Your plants", 
+              style: TextStyle(fontSize: 25),textAlign: TextAlign.start),
+                 Expanded(
+                  child: GridView.builder( itemCount: 2,
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2), 
+                  itemBuilder: (context, index ){
+                    return Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Container(
+                        height: 50  ,
+                        width: 50,
+                        color: Colors.blue,
+                      ),
+                    );
+                  })
+               
+            ,)
+
+              ],) 
+              
             ),
+            ]
+            
           )
         ],
       ),
