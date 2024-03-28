@@ -10,27 +10,45 @@ class FrontPage extends StatefulWidget {
 class FrontPageState extends State<FrontPage> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      backgroundColor: Color.fromARGB(255, 69, 189, 73),
-      body: Padding(
-        padding: EdgeInsets.all(20),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            TextField(
-              decoration: InputDecoration(
-                filled: true,
-                fillColor: Colors.white,
-                  enabledBorder: OutlineInputBorder(
-                      
-                  borderRadius: BorderRadius.all(Radius.circular(20))),
-                  hintText: "Name",
-                  hintStyle:
-                      TextStyle(color: Color.fromARGB(255, 188, 177, 177))),
-            )
-          ],
+    return  Scaffold(
+      
+      
+      backgroundColor:const  Color.fromARGB(255, 69, 189, 73),
+      
+        
+        
+        body: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.end,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+            
+              const TextField(
+                
+                decoration: InputDecoration(
+                  border: OutlineInputBorder( borderRadius: BorderRadius.all(Radius.circular(20))),
+                  filled: true,
+                  fillColor: Colors.white,
+                    enabledBorder: OutlineInputBorder(
+                        
+                    borderRadius: BorderRadius.all(Radius.circular(20))),
+                    hintText: "Name",
+                    hintStyle:
+                        TextStyle(color: Color.fromARGB(255, 188, 177, 177))),
+              ),
+            MaterialButton(onPressed: () {
+              
+            },
+            
+            color: Colors.blue,
+            child:const  Text("Done", style: TextStyle(color: Colors.white),),)
+            ],
+          
+          ),
         ),
-      ),
+      
+    
     );
   }
 }
