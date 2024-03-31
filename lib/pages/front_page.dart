@@ -1,7 +1,5 @@
 import 'package:botany/pages/home_page.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class FrontPage extends StatefulWidget {
   const FrontPage({Key? key}) : super(key: key);
@@ -11,6 +9,9 @@ class FrontPage extends StatefulWidget {
 }
 
 class FrontPageState extends State<FrontPage> {
+  //use this controller to get what the user types
+  final _textController= TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,10 +31,15 @@ class FrontPageState extends State<FrontPage> {
             // Move the TextField down by 50 pixels
             Transform.translate(
               offset: const Offset(0, 155),
-              child: const TextField(
+              child:  TextField(
+                controller: _textController,
+
                 textAlign: TextAlign.left,
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(
+                decoration:  InputDecoration(
+                  suffix: IconButton(onPressed: () {
+                    _textController.clear();
+                  }, icon: const Icon(Icons.clear,color: Colors.black,)),
+                  border: const OutlineInputBorder(
                       borderRadius: BorderRadius.all(Radius.circular(30))),
                   hintText: "Name",
                 ),
