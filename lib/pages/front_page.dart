@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class FrontPage extends StatefulWidget {
-  const FrontPage({super.key});
+  const FrontPage({Key? key}) : super(key: key);
 
   @override
   State<FrontPage> createState() => FrontPageState();
@@ -10,45 +10,34 @@ class FrontPage extends StatefulWidget {
 class FrontPageState extends State<FrontPage> {
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
-      
-      
-      backgroundColor:const  Color.fromARGB(255, 69, 189, 73),
-      
-        
-        
-        body: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.end,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-            
-              const TextField(
-                
-                decoration: InputDecoration(
-                  border: OutlineInputBorder( borderRadius: BorderRadius.all(Radius.circular(20))),
-                  filled: true,
-                  fillColor: Colors.white,
-                    enabledBorder: OutlineInputBorder(
-                        
-                    borderRadius: BorderRadius.all(Radius.circular(20))),
-                    hintText: "Name",
-                    hintStyle:
-                        TextStyle(color: Color.fromARGB(255, 188, 177, 177))),
-              ),
-            MaterialButton(onPressed: () {
-              
-            },
-            
-            color: Colors.blue,
-            child:const  Text("Done", style: TextStyle(color: Colors.white),),)
-            ],
-          
+    return Scaffold(
+      backgroundColor: Colors.transparent,
+      body: Container(
+        alignment: Alignment.center,
+        padding: const EdgeInsets.all(38),
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            fit: BoxFit.cover,
+            image: AssetImage('assets/images/front_page-01.jpg'),
           ),
         ),
-      
-    
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            // Move the TextField down by 50 pixels
+            Transform.translate(
+              offset: const Offset(0, 60),
+              child: const  TextField(
+                textAlign: TextAlign.left,
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(borderRadius: BorderRadius.all(Radius.circular(30))),
+                  hintText: "Name",
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

@@ -1,6 +1,6 @@
 
 import 'package:botany/pages/front_page.dart';
-import 'package:botany/pages/home_page.dart';
+//import 'package:botany/pages/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
