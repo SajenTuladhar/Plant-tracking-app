@@ -20,17 +20,20 @@ class _HomepageState extends State<Homepage> {
           padding: EdgeInsets.zero,
           children: [
             Container(
-              decoration: const BoxDecoration(
+              
+              decoration:  BoxDecoration(
+                
                   borderRadius: BorderRadius.only(
                       bottomRight: Radius.circular(80),
                       bottomLeft: Radius.circular(20)),
-                  color: Color.fromARGB(255, 2, 200, 111)),
+                  color: Colors.amber[700]),
               child: const Column(
                 children: [
                   SizedBox(
                     height: 40,
                   ),
                   ListTile(
+                    minVerticalPadding: 3,
                     contentPadding:
                         EdgeInsets.symmetric(horizontal: 30, vertical: 30),
                     title: Text(

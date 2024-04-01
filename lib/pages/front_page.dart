@@ -33,15 +33,16 @@ class FrontPageState extends State<FrontPage> {
               offset: const Offset(0, 155),
               child:  TextField(
                 controller: _textController,
-
-                textAlign: TextAlign.left,
+                 
+                textAlign: TextAlign.start,
                 decoration:  InputDecoration(
-                  suffix: IconButton(onPressed: () {
-                    _textController.clear();
-                  }, icon: const Icon(Icons.clear,color: Colors.black,)),
+                
                   border: const OutlineInputBorder(
                       borderRadius: BorderRadius.all(Radius.circular(30))),
                   hintText: "Name",
+                    suffix: IconButton(onPressed: () {
+                    _textController.clear();
+                  }, icon: const Icon(Icons.clear,color: Colors.black,size: 22,)),
                 ),
               ),
             ),
