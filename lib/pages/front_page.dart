@@ -35,14 +35,14 @@ class FrontPageState extends State<FrontPage> {
                 controller: _textController,
                  
                 textAlign: TextAlign.start,
-                decoration:  InputDecoration(
+                decoration: const  InputDecoration(
                 
-                  border: const OutlineInputBorder(
+                  border:  OutlineInputBorder(
                       borderRadius: BorderRadius.all(Radius.circular(30))),
                   hintText: "Name",
-                    suffix: IconButton(onPressed: () {
-                    _textController.clear();
-                  }, icon: const Icon(Icons.clear,color: Colors.black,size: 22,)),
+                  //   suffix: IconButton(onPressed: () {
+                  //   _textController.clear();
+                  // }, icon: const Icon(Icons.clear,color: Colors.black,size: 22,)),
                 ),
               ),
             ),

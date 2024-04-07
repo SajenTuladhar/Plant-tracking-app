@@ -21,12 +21,14 @@ class _HomepageState extends State<Homepage> {
           children: [
             Container(
               
+              
               decoration:  BoxDecoration(
                 
-                  borderRadius: BorderRadius.only(
+                
+                  borderRadius:const  BorderRadius.only(
                       bottomRight: Radius.circular(80),
                       bottomLeft: Radius.circular(20)),
-                  color: Colors.amber[700]),
+                  color: Color.fromARGB(255, 95, 248, 25)),
               child: const Column(
                 children: [
                   SizedBox(
@@ -63,7 +65,9 @@ class _HomepageState extends State<Homepage> {
                 height: 200,
                 width: 385,
                 decoration: const BoxDecoration(
-                    color: Color.fromARGB(129, 71, 172, 66),
+                  // image: DecorationImage(image: AssetImage('assets/images/plants.jpg'),
+                  // fit: BoxFit.cover),
+                    color: Color.fromARGB(255, 233, 237, 233),
                     borderRadius: BorderRadius.only(
                         bottomLeft: Radius.circular(20),
                         topRight: Radius.circular(20),
@@ -71,7 +75,7 @@ class _HomepageState extends State<Homepage> {
                         bottomRight: Radius.circular(20))),
                 padding: const EdgeInsets.all(60),
                 child: const Text(
-                  "Your Plants need water",
+                  "Your Plants need water !",
                   style: TextStyle(fontSize: 30),
                   textAlign: TextAlign.start,
                 ),
