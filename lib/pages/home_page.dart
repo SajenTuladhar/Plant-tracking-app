@@ -1,5 +1,5 @@
 import 'package:botany/pages/dialouge_box.dart';
-import 'package:botany/pages/setting_page.dart';
+ import 'package:botany/pages/setting_page.dart';
 import 'package:flutter/material.dart';
 
 
@@ -44,7 +44,7 @@ class Homepage extends StatelessWidget {
                           fontSize: 25,
                           fontWeight: FontWeight.bold),
                     ),
-                    subtitle: Text('$nameFromHome',
+                    subtitle: Text(nameFromHome,
                       style: const TextStyle(
                           color: Color.fromARGB(255, 255, 255, 255),
                           fontSize: 25,
@@ -177,11 +177,11 @@ class Homepage extends StatelessWidget {
                     IconButton(
                       icon: const Icon(Icons.settings_rounded),
                       onPressed: () {
-                        // Navigator.push(
-                        //   context,
-                        //   MaterialPageRoute(
-                        //       builder: (context) => const SettingsPage()),
-                        // );
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const SettingsPage()),
+                        );
                       },
                       iconSize: 35,
                       color: Colors.white,

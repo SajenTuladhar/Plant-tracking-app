@@ -2,17 +2,16 @@ import 'package:botany/pages/home_page.dart';
 import 'package:flutter/material.dart';
 
 class SettingsPage extends StatelessWidget {
-  const SettingsPage
-({super.key});
+  const SettingsPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       appBar: AppBar(
         title: const Text("Settings"),
       ),
-     body: const Center(child: Text("settings page")),
-     bottomNavigationBar: BottomAppBar(
+      body: const Center(child: Text("settings page")),
+      bottomNavigationBar: BottomAppBar(
         padding: const EdgeInsets.only(bottom: 2),
         height: 70,
         color: const Color.fromARGB(255, 184, 88, 16),
@@ -30,12 +29,11 @@ class SettingsPage extends StatelessWidget {
                   IconButton(
                     icon: const Icon(Icons.home_filled),
                     onPressed: () {
-                      // Navigator.pop(
-                      //   context,
-                      //   MaterialPageRoute(
-                      //       builder: (context) => const Homepage()),
-                      // );
-
+                      Navigator.pop(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const Homepage(AutofillHints.givenName)),
+                      );
                     },
                     iconSize: 35,
                     color: Colors.white,
@@ -45,15 +43,13 @@ class SettingsPage extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(right:45),
+              padding: const EdgeInsets.only(right: 45),
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   IconButton(
                     icon: const Icon(Icons.settings_rounded),
-                    onPressed: () {
-                      
-                    },
+                    onPressed: () {},
                     iconSize: 35,
                     color: Colors.white,
                   ),
