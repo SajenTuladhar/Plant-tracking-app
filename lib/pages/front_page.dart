@@ -2,7 +2,7 @@ import 'package:botany/pages/home_page.dart';
 import 'package:flutter/material.dart';
 
 class FrontPage extends StatefulWidget {
-  const FrontPage({Key? key}) : super(key: key);
+  const FrontPage({super.key});
 
   @override
   State<FrontPage> createState() => FrontPageState();
@@ -10,7 +10,10 @@ class FrontPage extends StatefulWidget {
 
 class FrontPageState extends State<FrontPage> {
   //use this controller to get what the user types
-  final _textController= TextEditingController();
+  final nameController=TextEditingController();
+
+  
+  
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +35,7 @@ class FrontPageState extends State<FrontPage> {
             Transform.translate(
               offset: const Offset(0, 155),
               child:  TextField(
-                controller: _textController,
+                controller: nameController,
                  
                 textAlign: TextAlign.start,
                 decoration: const  InputDecoration(
@@ -40,20 +43,20 @@ class FrontPageState extends State<FrontPage> {
                   border:  OutlineInputBorder(
                       borderRadius: BorderRadius.all(Radius.circular(30))),
                   hintText: "Name",
-                  //   suffix: IconButton(onPressed: () {
-                  //   _textController.clear();
-                  // }, icon: const Icon(Icons.clear,color: Colors.black,size: 22,)),
+                
                 ),
               ),
             ),
             const SizedBox(
               height: 180,
             ),
+            
             ElevatedButton(
               onPressed: () {
+                
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const Homepage()),
+                  MaterialPageRoute(builder: (context) =>  Homepage(nameController.text.toString())),
                   
                 );
               },

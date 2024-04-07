@@ -30,11 +30,11 @@ class SettingsPage extends StatelessWidget {
                   IconButton(
                     icon: const Icon(Icons.home_filled),
                     onPressed: () {
-                      Navigator.pop(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const Homepage()),
-                      );
+                      // Navigator.pop(
+                      //   context,
+                      //   MaterialPageRoute(
+                      //       builder: (context) => const Homepage()),
+                      // );
 
                     },
                     iconSize: 35,

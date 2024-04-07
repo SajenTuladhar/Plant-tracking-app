@@ -2,14 +2,13 @@ import 'package:botany/pages/dialouge_box.dart';
 import 'package:botany/pages/setting_page.dart';
 import 'package:flutter/material.dart';
 
-class Homepage extends StatefulWidget {
-  const Homepage({super.key});
 
-  @override
-  State<Homepage> createState() => _HomepageState();
-}
+class Homepage extends StatelessWidget {
+  final String nameFromHome;
+  const Homepage(this.nameFromHome, {super.key});
 
-class _HomepageState extends State<Homepage> {
+  
+
   @override
   Widget build(BuildContext context) {
     return PopScope(
@@ -22,32 +21,31 @@ class _HomepageState extends State<Homepage> {
             Container(
               
               
-              decoration:  BoxDecoration(
+              decoration: const BoxDecoration(
                 
                 
-                  borderRadius:const  BorderRadius.only(
+                  borderRadius:  BorderRadius.only(
                       bottomRight: Radius.circular(80),
                       bottomLeft: Radius.circular(20)),
-                  color: Color.fromARGB(255, 95, 248, 25)),
-              child: const Column(
+                  color: Color.fromARGB(255, 2, 158, 98)),
+              child:  Column(
                 children: [
-                  SizedBox(
+                  const SizedBox(
                     height: 40,
                   ),
                   ListTile(
                     minVerticalPadding: 3,
-                    contentPadding:
+                    contentPadding: const
                         EdgeInsets.symmetric(horizontal: 30, vertical: 30),
-                    title: Text(
+                    title: const Text(
                       "Good Morning !",
                       style: TextStyle(
                           color: Color.fromARGB(255, 255, 255, 255),
                           fontSize: 25,
                           fontWeight: FontWeight.bold),
                     ),
-                    subtitle: Text(
-                      "User",
-                      style: TextStyle(
+                    subtitle: Text('$nameFromHome',
+                      style: const TextStyle(
                           color: Color.fromARGB(255, 255, 255, 255),
                           fontSize: 25,
                           fontWeight: FontWeight.bold),
@@ -179,11 +177,11 @@ class _HomepageState extends State<Homepage> {
                     IconButton(
                       icon: const Icon(Icons.settings_rounded),
                       onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const SettingsPage()),
-                        );
+                        // Navigator.push(
+                        //   context,
+                        //   MaterialPageRoute(
+                        //       builder: (context) => const SettingsPage()),
+                        // );
                       },
                       iconSize: 35,
                       color: Colors.white,
