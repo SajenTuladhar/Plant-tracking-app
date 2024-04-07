@@ -32,7 +32,7 @@ class SettingsPage extends StatelessWidget {
                       Navigator.pop(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const Homepage(AutofillHints.givenName)),
+                            builder: (context) => const  Homepage(AutofillHints.givenName,AutofillHints.location)),
                       );
                     },
                     iconSize: 35,

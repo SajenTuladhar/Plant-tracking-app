@@ -12,9 +12,6 @@ class FrontPageState extends State<FrontPage> {
   //use this controller to get what the user types
   final nameController=TextEditingController();
 
-  
-  
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(

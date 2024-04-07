@@ -1,11 +1,13 @@
 import 'package:botany/pages/dialouge_box.dart';
- import 'package:botany/pages/setting_page.dart';
+import 'package:botany/pages/setting_page.dart';
 import 'package:flutter/material.dart';
 
 
 class Homepage extends StatelessWidget {
+  //get the current time
+  final String greetingText;
   final String nameFromHome;
-  const Homepage(this.nameFromHome, {super.key});
+  const  Homepage(this.nameFromHome,this.greetingText, {super.key});
 
   
 
