@@ -19,12 +19,13 @@ class Greeting extends StatelessWidget {
     }
 
     //navigate to the second page and pass the gretting text as parameter
-    WidgetsBinding.instance?.addPostFrameCallback((_) { 
+    WidgetsBinding.instance.addPostFrameCallback((_) { 
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context)=>Homepage(greeting))
+        MaterialPageRoute(builder: (context)=>Homepage(greetingText:greeting))
       );
     });
-    return const Placeholder();
+    //return a empty container
+    return Container() ;
   }
 }

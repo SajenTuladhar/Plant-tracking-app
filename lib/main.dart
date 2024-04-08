@@ -1,6 +1,6 @@
 
 import 'package:botany/pages/front_page.dart';
-//import 'package:botany/pages/home_page.dart';
+import 'package:botany/pages/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -19,6 +19,9 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       home: FrontPage(),
       debugShowCheckedModeBanner: false,
+      routes: {
+        '/homePage':(context)=> const Homepage(nameFromHome, greetingText)
+      },
       
 
     );

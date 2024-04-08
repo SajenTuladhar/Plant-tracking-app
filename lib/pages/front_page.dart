@@ -1,3 +1,4 @@
+
 import 'package:botany/pages/home_page.dart';
 import 'package:flutter/material.dart';
 
@@ -11,6 +12,7 @@ class FrontPage extends StatefulWidget {
 class FrontPageState extends State<FrontPage> {
   //use this controller to get what the user types
   final nameController=TextEditingController();
+  
 
   @override
   Widget build(BuildContext context) {
@@ -53,7 +55,7 @@ class FrontPageState extends State<FrontPage> {
                 
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) =>  Homepage(nameController.text.toString())),
+                  MaterialPageRoute(builder: (context)=>  Homepage(nameController.text.toString())),
                   
                 );
               },
@@ -64,9 +66,6 @@ class FrontPageState extends State<FrontPage> {
                   borderRadius: BorderRadius.circular(12), // <-- Radius
                 ),
               ),
-              // textColor: Colors.white,
-              // color: const Color.fromARGB(255, 95, 186, 43),
-
               child: const Text(
                 "Submit",
                 style: TextStyle(color: Colors.white),
