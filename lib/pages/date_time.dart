@@ -9,23 +9,28 @@ class Greeting extends StatelessWidget {
     //get current time
     DateTime currentTime = DateTime.now();
     // define gretting for diffrent times of the day
-    String greeting ='';
-    if (currentTime.hour >= 6 && currentTime.hour<12){
-      greeting = 'Good morning';  
-    }else if(currentTime.hour >12 && currentTime.hour <18){
-      greeting = 'Good afternoon';
-    }else{
-      greeting = 'Good evening';
-    }
-
+    String greeting = _getGreeting(currentTime);
     //navigate to the second page and pass the gretting text as parameter
-    WidgetsBinding.instance.addPostFrameCallback((_) { 
+    WidgetsBinding.instance.addPostFrameCallback((_) {
       Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context)=>Homepage(greetingText:greeting))
-      );
+          context,
+          MaterialPageRoute(
+              builder: (context) => Homepage(
+                    nameFromHome: '',
+                    greetingText: greeting,
+                  )));
     });
     //return a empty container
-    return Container() ;
+    return Container();
   }
+}
+
+String _getGreeting(DateTime currentTime){
+     if (currentTime.hour >= 6 && currentTime.hour<12){
+      return 'Good morning';  
+    }else if(currentTime.hour >12 && currentTime.hour <18){
+      return 'Good afternoon';
+    }else{
+      return  'Good evening';
+    }
 }

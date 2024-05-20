@@ -1,4 +1,3 @@
-
 import 'package:botany/pages/front_page.dart';
 import 'package:botany/pages/home_page.dart';
 import 'package:flutter/material.dart';
@@ -16,11 +15,11 @@ class MyApp extends StatelessWidget {
      SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
     statusBarColor: Color.fromARGB(255, 255, 255, 255)
   ));
-    return const MaterialApp(
-      home: FrontPage(),
+    return  MaterialApp(
+      home: const FrontPage(),
       debugShowCheckedModeBanner: false,
       routes: {
-        '/homePage':(context)=> const Homepage(nameFromHome, greetingText)
+        '/homePage':(context)=> const Homepage(nameFromHome:'', greetingText:'')
       },
       
 
