@@ -1,6 +1,3 @@
-import 'dart:ffi';
-import 'dart:js_interop';
-
 import 'package:botany/pages/home_page.dart';
 import 'package:flutter/material.dart';
 

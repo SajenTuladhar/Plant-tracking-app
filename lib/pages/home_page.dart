@@ -22,7 +22,7 @@ class Homepage extends StatelessWidget {
                   borderRadius: BorderRadius.only(
                       bottomRight: Radius.circular(80),
                       bottomLeft: Radius.circular(20)),
-                  color: Color.fromARGB(255, 2, 158, 98)),
+                  color: Color.fromARGB(255, 32, 218, 146)),
               child: Column(
                 children: [
                   const SizedBox(
