@@ -28,11 +28,12 @@ class Homepage extends StatelessWidget {
                 children: [
                   const SizedBox(
                     height: 30,
-                  ),
+                  ), 
                   ListTile(
+                    visualDensity: const VisualDensity(vertical: -4),
                     minVerticalPadding: 2,
                     contentPadding: const EdgeInsets.symmetric(
-                        horizontal: 30, vertical: 30),
+                       horizontal: 30, vertical: 30),
                     title: Padding(
                       padding: const EdgeInsets.symmetric(vertical: 10),
                       child: Text(
@@ -46,7 +47,7 @@ class Homepage extends StatelessWidget {
                       ),
                     ),
                     subtitle: Padding(
-                      padding: const EdgeInsets.only (top: 10),
+                      padding: const EdgeInsets.only (top: 0),
                       child: Text(
                       
                         nameFromHome,
@@ -79,7 +80,7 @@ class Homepage extends StatelessWidget {
               }
             );
           },
-          backgroundColor: const Color.fromARGB(255, 2, 200, 111),
+          backgroundColor: Color.fromARGB(255, 22, 208, 130),
           elevation: 0,
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(67)),
@@ -92,7 +93,7 @@ class Homepage extends StatelessWidget {
         bottomNavigationBar: BottomAppBar(
           padding: const EdgeInsets.only(bottom: 2),
           height: 70,
-          color: const Color.fromARGB(255, 224, 115, 32),
+          color: Color.fromARGB(255, 29, 27, 25),
           notchMargin: 10,
           shape: const CircularNotchedRectangle(),
           child: Row(
