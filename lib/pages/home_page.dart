@@ -1,6 +1,7 @@
 import 'package:botany/pages/dialouge_box.dart';
 import 'package:botany/pages/setting_page.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
 class Homepage extends StatelessWidget {
   //get the current time
@@ -22,31 +23,41 @@ class Homepage extends StatelessWidget {
                   borderRadius: BorderRadius.only(
                       bottomRight: Radius.circular(80),
                       bottomLeft: Radius.circular(20)),
-                  color: Color.fromARGB(255, 255, 252, 252)),
+                  color: Color.fromARGB(255, 223, 221, 221)),
               child: Column(
                 children: [
                   const SizedBox(
-                    height: 40,
+                    height: 30,
                   ),
                   ListTile(
-                    minVerticalPadding: 3,
+                    minVerticalPadding: 2,
                     contentPadding: const EdgeInsets.symmetric(
                         horizontal: 30, vertical: 30),
-                    title: Text(
-                      greetingText,
-                      style: const TextStyle(
-                          color: Color.fromARGB(255, 0, 0, 0),
-                          fontFamily: 'Simple',
-                          fontSize: 45,
-                          fontWeight: FontWeight.bold),
+                    title: Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 10),
+                      child: Text(
+                        greetingText,
+                        style: const TextStyle(
+                            color: Color.fromARGB(255, 0, 0, 0),
+                            fontFamily: 'Simple',
+                            fontSize: 45,
+                            letterSpacing: 2,
+                            fontWeight: FontWeight.bold),
+                      ),
                     ),
-                    subtitle: Text(
-                      nameFromHome,
-                      style: const TextStyle(
-                          color: Color.fromARGB(255, 0, 0, 0),
-                          fontFamily: 'Simple',
-                          fontSize: 45,
-                          fontWeight: FontWeight.bold),
+                    subtitle: Padding(
+                      padding: const EdgeInsets.only (top: 10),
+                      child: Text(
+                      
+                        nameFromHome,
+                        style: const TextStyle(
+                           
+                            color: Color.fromARGB(255, 0, 0, 0),
+                            fontFamily: 'Simple',
+                            fontSize: 45,
+                            letterSpacing: 2,
+                            fontWeight: FontWeight.bold),
+                      ),
                     ),
                   )
                 ],
