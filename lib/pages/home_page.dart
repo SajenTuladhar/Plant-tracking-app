@@ -22,7 +22,7 @@ class Homepage extends StatelessWidget {
                   borderRadius: BorderRadius.only(
                       bottomRight: Radius.circular(80),
                       bottomLeft: Radius.circular(20)),
-                  color: Color.fromARGB(255, 0, 164, 101)),
+                  color: Color.fromARGB(255, 255, 252, 252)),
               child: Column(
                 children: [
                   const SizedBox(
@@ -35,15 +35,17 @@ class Homepage extends StatelessWidget {
                     title: Text(
                       greetingText,
                       style: const TextStyle(
-                          color: Color.fromARGB(255, 255, 255, 255),
-                          fontSize: 25,
+                          color: Color.fromARGB(255, 0, 0, 0),
+                          fontFamily: 'Simple',
+                          fontSize: 45,
                           fontWeight: FontWeight.bold),
                     ),
                     subtitle: Text(
                       nameFromHome,
                       style: const TextStyle(
-                          color: Color.fromARGB(255, 255, 255, 255),
-                          fontSize: 25,
+                          color: Color.fromARGB(255, 0, 0, 0),
+                          fontFamily: 'Simple',
+                          fontSize: 45,
                           fontWeight: FontWeight.bold),
                     ),
                   )
@@ -51,7 +53,7 @@ class Homepage extends StatelessWidget {
               ),
             ),
             const SizedBox(
-              height: 30,
+              height: 10,
             ),
             
           ],
