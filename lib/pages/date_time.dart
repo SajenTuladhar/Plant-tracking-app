@@ -27,10 +27,10 @@ class Greeting extends StatelessWidget {
 
 String _getGreeting(DateTime currentTime){
      if (currentTime.hour >= 6 && currentTime.hour<12){
-      return 'Good morning';  
+      return 'Good Morning';  
     }else if(currentTime.hour >12 && currentTime.hour <18){
-      return 'Good afternoon';
+      return 'Good Afternoon';
     }else{
-      return  'Good evening';
+      return  'Good Evening';
     }
 }

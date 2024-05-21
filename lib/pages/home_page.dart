@@ -22,7 +22,7 @@ class Homepage extends StatelessWidget {
                   borderRadius: BorderRadius.only(
                       bottomRight: Radius.circular(80),
                       bottomLeft: Radius.circular(20)),
-                  color: Color.fromARGB(255, 32, 218, 146)),
+                  color: Color.fromARGB(255, 0, 164, 101)),
               child: Column(
                 children: [
                   const SizedBox(
@@ -53,73 +53,9 @@ class Homepage extends StatelessWidget {
             const SizedBox(
               height: 30,
             ),
-            //Message container
-            UnconstrainedBox(
-              child: Container(
-                height: 200,
-                width: 385,
-                decoration: const BoxDecoration(
-                    // image: DecorationImage(image: AssetImage('assets/images/plants.jpg'),
-                    // fit: BoxFit.cover),
-                    color: Color.fromARGB(255, 233, 237, 233),
-                    borderRadius: BorderRadius.only(
-                        bottomLeft: Radius.circular(20),
-                        topRight: Radius.circular(20),
-                        topLeft: Radius.circular(20),
-                        bottomRight: Radius.circular(20))),
-                padding: const EdgeInsets.all(60),
-                child: const Text(
-                  "Your Plants need water !",
-                  style: TextStyle(fontSize: 30),
-                  textAlign: TextAlign.start,
-                ),
-              ),
-            ),
-            const SizedBox(
-              height: 30,
-            ),
-
-            //your plants container
-
-            Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-              Container(
-                  decoration: const BoxDecoration(
-                      borderRadius: BorderRadius.only(
-                          bottomLeft: Radius.circular(20),
-                          topRight: Radius.circular(20),
-                          topLeft: Radius.circular(20),
-                          bottomRight: Radius.circular(20)),
-                      color: Color.fromARGB(255, 202, 201, 201)),
-                  height: 600,
-                  width: 385,
-                  padding: const EdgeInsets.all(30),
-                  child: Column(
-                    children: [
-                      const Text("Your plants",
-                          style: TextStyle(fontSize: 25),
-                          textAlign: TextAlign.start),
-                      Expanded(
-                        child: GridView.builder(
-                            itemCount: 2,
-                            gridDelegate:
-                                const SliverGridDelegateWithFixedCrossAxisCount(
-                                    crossAxisCount: 2),
-                            itemBuilder: (context, index) {
-                              return Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Container(
-                                  height: 50,
-                                  width: 50,
-                                  color: Colors.blue,
-                                ),
-                              );
-                            }),
-                      )
-                    ],
-                  )),
-            ])
+            
           ],
-        ),
+         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         floatingActionButton: FloatingActionButton.large(
           onPressed: () {
