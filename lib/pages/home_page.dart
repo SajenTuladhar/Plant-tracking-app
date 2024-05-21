@@ -123,7 +123,12 @@ class Homepage extends StatelessWidget {
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         floatingActionButton: FloatingActionButton.large(
           onPressed: () {
-            DialougeBox;
+            showDialog(
+              context: context, 
+              builder: (BuildContext context){
+                return const DialougeBox();
+              }
+            );
           },
           backgroundColor: const Color.fromARGB(255, 2, 200, 111),
           elevation: 0,

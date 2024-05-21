@@ -5,11 +5,11 @@ class DialougeBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const   AlertDialog(
-      
+    return const AlertDialog(
+      title: Text('Add your plant'),
       content: SizedBox(
-        height: 20  ,
-        width: 50,
+        height: 130  ,
+        width: 300,
         child:  Column(
          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
 
