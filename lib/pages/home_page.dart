@@ -1,6 +1,8 @@
 import 'package:botany/pages/dialouge_box.dart';
 import 'package:botany/pages/setting_page.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
+import 'package:flutter/widgets.dart';
 
 class Homepage extends StatelessWidget {
   final String greetingText;
@@ -17,32 +19,33 @@ class Homepage extends StatelessWidget {
     return PopScope(
       canPop: false,
       child: Scaffold(
-        resizeToAvoidBottomInset: true,
-        
         body: Column(
-          
           children: [
             Container(
-              
-              width: 450,
-              height: 235,
+
+              width: double.infinity,
+              height: 195,
               decoration: const BoxDecoration(
-                borderRadius: BorderRadius.only(),
-                color: Color.fromARGB(255, 67, 66, 66),
+                
+                
+                borderRadius: BorderRadius.only(bottomRight: Radius.circular(34),bottomLeft: Radius.circular(34)),
+                color: Color.fromARGB(255, 137, 129, 129),
+                
               ),
-              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 75),
+              padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 55),
               child: Column(
-               
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    greetingText,
-                    style: const TextStyle(
-                      color: Color.fromARGB(255, 0, 0, 0),
-                      fontFamily: 'Simple',
-                      fontSize: 45,
-                      letterSpacing: 2,
-                      fontWeight: FontWeight.bold,
+                  Expanded(
+                    child: Text(
+                      greetingText,
+                      style: const TextStyle(
+                        color: Color.fromARGB(255, 0, 0, 0),
+                        fontFamily: 'Simple',
+                        fontSize: 45,
+                        letterSpacing: 2,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                   
