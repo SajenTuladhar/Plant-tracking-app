@@ -1,89 +1,83 @@
 import 'package:botany/pages/dialouge_box.dart';
 import 'package:botany/pages/setting_page.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 
 class Homepage extends StatelessWidget {
-  //get the current time
   final String greetingText;
   final String nameFromHome;
-  const Homepage(
-      {required this.nameFromHome, required this.greetingText, super.key});
+
+  const Homepage({
+    required this.nameFromHome,
+    required this.greetingText,
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
     return PopScope(
       canPop: false,
       child: Scaffold(
-        body: ListView(
-          padding: EdgeInsets.zero,
+        resizeToAvoidBottomInset: true,
+        
+        body: Column(
+          
           children: [
             Container(
+              
+              width: 450,
+              height: 235,
               decoration: const BoxDecoration(
-                  borderRadius: BorderRadius.only(
-                      bottomRight: Radius.circular(80),
-                      bottomLeft: Radius.circular(20)),
-                  color: Color.fromARGB(255, 223, 221, 221)),
+                borderRadius: BorderRadius.only(),
+                color: Color.fromARGB(255, 67, 66, 66),
+              ),
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 75),
               child: Column(
+               
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const SizedBox(
-                    height: 30,
-                  ), 
-                  ListTile(
-                    visualDensity: const VisualDensity(vertical: -4),
-                    minVerticalPadding: 2,
-                    contentPadding: const EdgeInsets.symmetric(
-                       horizontal: 30, vertical: 30),
-                    title: Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 10),
-                      child: Text(
-                        greetingText,
-                        style: const TextStyle(
-                            color: Color.fromARGB(255, 0, 0, 0),
-                            fontFamily: 'Simple',
-                            fontSize: 45,
-                            letterSpacing: 2,
-                            fontWeight: FontWeight.bold),
-                      ),
+                  Text(
+                    greetingText,
+                    style: const TextStyle(
+                      color: Color.fromARGB(255, 0, 0, 0),
+                      fontFamily: 'Simple',
+                      fontSize: 45,
+                      letterSpacing: 2,
+                      fontWeight: FontWeight.bold,
                     ),
-                    subtitle: Padding(
-                      padding: const EdgeInsets.only (top: 0),
-                      child: Text(
-                      
-                        nameFromHome,
-                        style: const TextStyle(
-                           
-                            color: Color.fromARGB(255, 0, 0, 0),
-                            fontFamily: 'Simple',
-                            fontSize: 45,
-                            letterSpacing: 2,
-                            fontWeight: FontWeight.bold),
-                      ),
+                  ),
+                  
+                  Text(
+                    nameFromHome,
+                    style: const TextStyle(
+                      height: 0.5,
+                      color: Color.fromARGB(255, 0, 0, 0),
+                      fontFamily: 'Simple',
+                      fontSize: 45,
+                      letterSpacing: 2,
+                      fontWeight: FontWeight.bold,
                     ),
-                  )
+                  ),
                 ],
               ),
             ),
-            const SizedBox(
-              height: 10,
-            ),
-            
+            // Add other widgets or containers here if needed
           ],
-         ),
+        ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         floatingActionButton: FloatingActionButton.large(
           onPressed: () {
             showDialog(
-              context: context, 
-              builder: (BuildContext context){
+              context: context,
+              builder: (BuildContext context) {
                 return const DialougeBox();
-              }
+              },
             );
           },
-          backgroundColor: Color.fromARGB(255, 22, 208, 130),
+          backgroundColor: const Color.fromARGB(255, 22, 208, 130),
           elevation: 0,
-          shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(67)),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(67),
+          ),
           child: const Icon(
             Icons.add,
             size: 45,
@@ -93,7 +87,7 @@ class Homepage extends StatelessWidget {
         bottomNavigationBar: BottomAppBar(
           padding: const EdgeInsets.only(bottom: 2),
           height: 70,
-          color: Color.fromARGB(255, 29, 27, 25),
+          color: const Color.fromARGB(255, 29, 27, 25),
           notchMargin: 10,
           shape: const CircularNotchedRectangle(),
           child: Row(
@@ -126,7 +120,8 @@ class Homepage extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const SettingsPage()),
+                            builder: (context) => const SettingsPage(),
+                          ),
                         );
                       },
                       iconSize: 35,
