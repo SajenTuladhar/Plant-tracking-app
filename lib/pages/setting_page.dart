@@ -14,7 +14,7 @@ class SettingsPage extends StatelessWidget {
       bottomNavigationBar: BottomAppBar(
         padding: const EdgeInsets.only(bottom: 2),
         height: 70,
-        color: const Color.fromARGB(255, 184, 88, 16),
+        color: Color.fromARGB(255, 27, 25, 24),
         notchMargin: 15,
         shape: const CircularNotchedRectangle(),
         child: Row(

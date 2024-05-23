@@ -1,8 +1,6 @@
 import 'package:botany/pages/dialouge_box.dart';
 import 'package:botany/pages/setting_page.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter/widgets.dart';
 
 class Homepage extends StatelessWidget {
   final String greetingText;
@@ -22,17 +20,15 @@ class Homepage extends StatelessWidget {
         body: Column(
           children: [
             Container(
-
               width: double.infinity,
-              height: 195,
+              height: 220,
               decoration: const BoxDecoration(
-                
-                
-                borderRadius: BorderRadius.only(bottomRight: Radius.circular(34),bottomLeft: Radius.circular(34)),
-                color: Color.fromARGB(255, 137, 129, 129),
-                
+                borderRadius: BorderRadius.only(
+                    bottomRight: Radius.circular(34),
+                    bottomLeft: Radius.circular(34)),
+                color: Color.fromARGB(255, 255, 251, 251),
               ),
-              padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 55),
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 70),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -48,7 +44,6 @@ class Homepage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  
                   Text(
                     nameFromHome,
                     style: const TextStyle(
@@ -63,7 +58,32 @@ class Homepage extends StatelessWidget {
                 ],
               ),
             ),
-            // Add other widgets or containers here if needed
+            Container(
+              color: const Color.fromARGB(255, 255, 254, 250),
+              height: 200,
+              width: double.infinity,
+              child: const ListTile(
+                title: Text('Your plants'),
+                titleTextStyle: TextStyle(
+                    shadows: [
+                      Shadow(
+                        color:Colors.black,
+                        offset: Offset(0, -9)
+                      )
+                    ],
+                    color:Colors.transparent,
+                   decoration: TextDecoration.underline,
+                   decorationThickness: 3,
+                   decorationStyle: TextDecorationStyle.dotted,
+                   decorationColor: Colors.black,
+                    fontFamily: 'Simple',
+                    fontSize: 45,
+                    fontWeight: FontWeight.bold,
+                    letterSpacing: 1
+                    ),
+                  
+              ),
+            ) // Add other widgets or containers here if needed
           ],
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
