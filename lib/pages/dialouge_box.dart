@@ -1,7 +1,21 @@
 import 'package:flutter/material.dart';
 
-class DialougeBox extends StatelessWidget {
+class DialougeBox extends StatefulWidget {
   const DialougeBox({super.key});
+
+  @override
+  State<DialougeBox> createState() => _DialougeBoxState();
+}
+
+class _DialougeBoxState extends State<DialougeBox> {
+  final myController = TextEditingController();
+
+  @override
+  dispose() {
+    // Clean up the controller when the widget is disposed.
+    myController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -19,8 +33,9 @@ class DialougeBox extends StatelessWidget {
           child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                const TextField(
-                  decoration: InputDecoration(
+                TextField(
+                  controller: myController,
+                  decoration: const InputDecoration(
                     hintText: 'Plant Name',
                     hintStyle: TextStyle(
                         fontFamily: 'Simple',
@@ -34,9 +49,7 @@ class DialougeBox extends StatelessWidget {
                 Align(
                   alignment: Alignment.centerRight,
                   child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.of(context).pop();
-                    },
+                    onPressed: () {},
                     child: const Text(
                       'Submit',
                       style: TextStyle(
@@ -50,5 +63,6 @@ class DialougeBox extends StatelessWidget {
                 )
               ]),
         ));
+    
   }
 }

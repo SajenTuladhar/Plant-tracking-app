@@ -1,16 +1,26 @@
 import 'package:botany/pages/dialouge_box.dart';
 import 'package:botany/pages/setting_page.dart';
+import 'package:botany/util/plants_tile.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
-class Homepage extends StatelessWidget {
+class Homepage extends StatefulWidget {
   final String greetingText;
   final String nameFromHome;
 
-  const Homepage({
+   const Homepage({
     required this.nameFromHome,
     required this.greetingText,
     super.key,
   });
+
+  @override
+  State<Homepage> createState() => _HomepageState();
+}
+
+class _HomepageState extends State<Homepage> {
+ 
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +36,7 @@ class Homepage extends StatelessWidget {
                 borderRadius: BorderRadius.only(
                     bottomRight: Radius.circular(34),
                     bottomLeft: Radius.circular(34)),
-                color: Color.fromARGB(255, 255, 251, 251),
+                color: Color.fromARGB(255, 34, 31, 31),
               ),
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 70),
               child: Column(
@@ -34,7 +44,7 @@ class Homepage extends StatelessWidget {
                 children: [
                   Expanded(
                     child: Text(
-                      greetingText,
+                      widget.greetingText,
                       style: const TextStyle(
                         color: Color.fromARGB(255, 0, 0, 0),
                         fontFamily: 'Simple',
@@ -45,7 +55,7 @@ class Homepage extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    nameFromHome,
+                    widget.nameFromHome,
                     style: const TextStyle(
                       height: 0.5,
                       color: Color.fromARGB(255, 0, 0, 0),
@@ -58,33 +68,14 @@ class Homepage extends StatelessWidget {
                 ],
               ),
             ),
-            Container(
-              color: const Color.fromARGB(255, 255, 254, 250),
-              height: 200,
-              width: double.infinity,
-              child: const ListTile(
-                title: Text('Your plants'),
-                titleTextStyle: TextStyle(
-                    shadows: [
-                      Shadow(
-                        color:Colors.black,
-                        offset: Offset(0, -9)
-                      )
-                    ],
-                    color:Colors.transparent,
-                   decoration: TextDecoration.underline,
-                   decorationThickness: 3,
-                   decorationStyle: TextDecorationStyle.dotted,
-                   decorationColor: Colors.black,
-                    fontFamily: 'Simple',
-                    fontSize: 45,
-                    fontWeight: FontWeight.bold,
-                    letterSpacing: 1
-                    ),
-                  
-              ),
-            ) // Add other widgets or containers here if needed
-          ],
+            
+             Expanded(
+               child: ListView(children: const [
+                PlantsTile()
+               ],),
+             ),
+             // Add other widgets or containers here if needed
+          ] 
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         floatingActionButton: FloatingActionButton.large(
