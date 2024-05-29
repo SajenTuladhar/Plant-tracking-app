@@ -28,14 +28,22 @@ class _HomepageState extends State<Homepage> {
         body: Column(children: [
           Container(
             width: double.infinity,
-            height: 220,
-            decoration: const BoxDecoration(
-              borderRadius: BorderRadius.only(
+            height: 180,
+            decoration:  BoxDecoration(
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.grey.withOpacity(0.5),
+                  spreadRadius: 5,
+                  blurRadius: 7,
+                  offset: const Offset(0, 3), // changes position of shadow
+                ),
+              ],
+              borderRadius: const BorderRadius.only(
                   bottomRight: Radius.circular(34),
                   bottomLeft: Radius.circular(34)),
-              color: Color.fromARGB(255, 255, 251, 251),
+              color:const  Color.fromARGB(255, 255, 248, 248),
             ),
-            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 70),
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 50),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -65,30 +73,25 @@ class _HomepageState extends State<Homepage> {
               ],
             ),
           ),
+          const SizedBox(height:20),
           Container(
-            
             height: 100,
             width: double.infinity,
-            color: const Color.fromARGB(255, 254, 253, 252),
+            color: Color.fromARGB(255, 255, 252, 249),
             child: const Padding(
               padding: EdgeInsets.all(15),
               child: Text(
                 'Your plants',
                 style: TextStyle(
-                   shadows: [
-                Shadow(
-                    color: Colors.black,
-                    offset: Offset(0, -5))
-              ],
-                color: Colors.transparent,
+                  shadows: [Shadow(color: Colors.black, offset: Offset(0, -5))],
+                  color: Colors.transparent,
                   decoration: TextDecoration.underline,
                   decorationThickness: 3,
                   decorationStyle: TextDecorationStyle.dotted,
-                    fontFamily: 'simple',
-                    fontSize: 50,
-                    fontWeight: FontWeight.bold,
-                    
-                    ),
+                  fontFamily: 'simple',
+                  fontSize: 42,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
           ),
