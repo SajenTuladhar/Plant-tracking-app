@@ -6,6 +6,7 @@ class PlantsTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const ListTile(
+      shape: CircleBorder( ),
       
       leading: Icon(Icons.energy_savings_leaf),
       title: Text('Cactus'),

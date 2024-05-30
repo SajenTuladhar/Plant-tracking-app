@@ -28,22 +28,22 @@ class _HomepageState extends State<Homepage> {
         body: Column(children: [
           Container(
             width: double.infinity,
-            height: 180,
+            height: 160,
             decoration:  BoxDecoration(
               boxShadow: [
                 BoxShadow(
                   color: Colors.grey.withOpacity(0.5),
                   spreadRadius: 5,
                   blurRadius: 7,
-                  offset: const Offset(0, 3), // changes position of shadow
+                  offset: const Offset(0, 1), // changes position of shadow
                 ),
               ],
               borderRadius: const BorderRadius.only(
                   bottomRight: Radius.circular(34),
                   bottomLeft: Radius.circular(34)),
-              color:const  Color.fromARGB(255, 255, 248, 248),
+              color:Color.fromARGB(255, 255, 255, 255),
             ),
-            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 50),
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 40),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -73,11 +73,11 @@ class _HomepageState extends State<Homepage> {
               ],
             ),
           ),
-          const SizedBox(height:20),
+          const SizedBox(height:10),
           Container(
-            height: 100,
+            height: 80,
             width: double.infinity,
-            color: Color.fromARGB(255, 255, 252, 249),
+            color: Color.fromARGB(255, 255, 255, 254),
             child: const Padding(
               padding: EdgeInsets.all(15),
               child: Text(
